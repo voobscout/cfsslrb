@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+%w(bundler/setup pry cfsslrb).each(&method(:require))
+
+Cfsslrb::Cli.start(ARGV) if $0 == __FILE__

@@ -1,0 +1,59 @@
+ssl:
+  config:
+    signing:
+      default:
+        expiry: 43800h
+      profiles:
+        server:
+          expiry: 43800h
+          usages:
+          - signing
+          - key encipherment
+          - server auth
+        client:
+          expiry: 43800h
+          usages:
+          - signing
+          - key encipherment
+          - client auth
+        client-server:
+          expiry: 43800h
+          usages:
+          - signing
+          - key encipherment
+          - server auth
+          - client auth
+  ca:
+    CN: Infinidim Enterprises Lab
+    hosts:
+    - www.infinidim.enterprises
+    - ctl.infinidim.enterprises
+    - n0.infinidim.enterprises
+    - n1.infinidim.enterprises
+    - n2.infinidim.enterprises
+    - n3.infinidim.enterprises
+    key:
+      algo: rsa
+      size: 2048
+    names:
+    - C: US
+      L: Frogstar
+      O: Sirius Cybernetics Corporation
+      OU: Complaints Department
+      ST: World B
+  node:
+    CN: hostname
+    hosts:
+    - localhost
+    - localhost.local
+    - 127.0.0.1
+    - hostname
+    - hostname.domain.name
+    - public_ipv4
+    key:
+      algo: rsa
+      size: 2048
+    names:
+    - C: US
+      L: Frogstar
+      ST: World B

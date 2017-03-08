@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
-%w(bundler/setup pry cfsslrb).each(&method(:require))
-
-Cfsslrb::Cli.start(ARGV) if $0 == __FILE__
+# require File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'fog'))
+require (Pathname.new(__FILE__).expand_path.dirname.parent + 'lib/cfsslrb').to_s
+# %w(bundler/setup pry cfsslrb).each(&method(:require))
+Cfsslrb::Cli.start(ARGV)

@@ -3,9 +3,12 @@
    fileutils
    pathname
    cocaine
-   thor
-   cfsslrb/version
-   cfsslrb/cli).each(&method(:require))
+   thor).each(&method(:require))
+
+[
+   'cfsslrb/version',
+   'cfsslrb/cli'
+].each { |r| require (Pathname.new(__FILE__).expand_path.dirname + r).to_s }
 
 # module Cfsslrb
 module Cfsslrb

@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["voobscout@archlinux.info"]
 
   spec.summary       = %q{cfsslrb - yml instead of json}
-  spec.description   = %q{json is less human readable then yaml}
+  spec.description   = spec.summary
   spec.homepage      = "http://"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
-  spec.bindir        = "bin"
+  # spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 

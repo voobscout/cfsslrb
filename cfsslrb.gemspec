@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["voobscout"]
   spec.email         = ["voobscout@archlinux.info"]
 
-  spec.summary       = %q{cfsslrb - yml instead of json}
+  spec.summary       = %q{cfsslrb - yaml instead of json}
   spec.description   = spec.summary
-  spec.homepage      = "http://"
+  spec.homepage      = "https://github.com/voobscout/cfsslrb"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.

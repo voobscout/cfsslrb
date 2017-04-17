@@ -4,8 +4,8 @@ module Cfsslrb
       option ['-t', '--type'], 'TYPE', 'One of: [client, server, client-server]', required: true do |t|
         [t].grep(/^client$|^server$|^client-server$/).first ? t : signal_usage_error('TYPE must be one of [client, server, client-server]')
       end
-      option '--key-algo', 'algo', 'rsa etc..', default: 'rsa'
-      option '--key-size', 'keysize', 'Key size etc...', default: 2048
+      option '--key-algo', '', 'rsa etc..', default: 'rsa'
+      option '--key-size', 'INT', 'Key size etc...', default: 2048
       option '--[no-]json-dump', :flag, 'Dump json files together with certs', default: false
 
       parameter 'CN', 'Common Name'

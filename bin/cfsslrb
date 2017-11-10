@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# require 'pry'
+require 'pathname'
 require((Pathname.new(__FILE__).expand_path.dirname.parent + 'lib/cfsslrb').to_s)
 Cfsslrb::CLI::MainCommand.run
 # (ARGV)
